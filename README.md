@@ -6,7 +6,7 @@ The customer would have the ability to select a store to purchase products, sele
 The user has the opportunity to view the list of orders. After the specific order would be choosen, a complete information about the products (their quantity, price and total cost of the order) would be displayed.
 Your task is to create a database according to the schema and define all the CRUD operations over the data.
 
-![DBschema](/images/1.png)
+
 ![image](https://user-images.githubusercontent.com/35597862/201227917-c53367a7-e867-494f-9746-5fa45fcb6b1d.png)
 
 1.	Create a data model:
@@ -18,9 +18,9 @@ Your task is to create a database according to the schema and define all the CRU
 5.	Create the class for seeding your DataBase (SampleData.cs). Define the ServiceProvider in Program.cs.
 6.	Build the application. As the result you might have your DB in SQL Server Object Explorer. 
 
-![DB1](/images/2.PNG)
-![DB2](/images/3.PNG)
-![DB3](/images/4.PNG)
+[![DB1](/images/2.PNG)](https://github.com/FreeJobMe/C-OnlineMarathon-Sprint16/blob/master/images/2.PNG)
+[![DB2](/images/3.PNG)](https://github.com/FreeJobMe/C-OnlineMarathon-Sprint16/blob/master/images/3.PNG)
+[![DB3](/images/4.PNG)](https://github.com/FreeJobMe/C-OnlineMarathon-Sprint16/blob/master/images/4.PNG)
 
 Note. In case of any mistakes in DB schema you are able to alter the models, add migrations and update your database.
 7.	Create controllers and views for Products, Supermarkets, Customers DataModels (use scaffolding). Change Index page of application (add navy-bars and links to appropriate Index pages of DataModels) 
