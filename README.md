@@ -17,10 +17,7 @@ Your task is to create a database according to the schema and define all the CRU
 4.	Add connection string to appsettings.json.
 5.	Create the class for seeding your DataBase (SampleData.cs). Define the ServiceProvider in Program.cs.
 6.	Build the application. As the result you might have your DB in SQL Server Object Explorer. 
-
-[![DB1](/images/2.PNG)](https://github.com/FreeJobMe/C-OnlineMarathon-Sprint16/blob/master/images/2.PNG)
-[![DB2](/images/3.PNG)](https://github.com/FreeJobMe/C-OnlineMarathon-Sprint16/blob/master/images/3.PNG)
-[![DB3](/images/4.PNG)](https://github.com/FreeJobMe/C-OnlineMarathon-Sprint16/blob/master/images/4.PNG)
+https://github.com/FreeJobMe/C-OnlineMarathon-Sprint16/raw/master/images/2.PNG
 
 Note. In case of any mistakes in DB schema you are able to alter the models, add migrations and update your database.
 7.	Create controllers and views for Products, Supermarkets, Customers DataModels (use scaffolding). Change Index page of application (add navy-bars and links to appropriate Index pages of DataModels) 
