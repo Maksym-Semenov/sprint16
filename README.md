@@ -7,6 +7,7 @@ The user has the opportunity to view the list of orders. After the specific orde
 Your task is to create a database according to the schema and define all the CRUD operations over the data.
 
 ![DBschema](/images/1.png)
+![image](https://user-images.githubusercontent.com/35597862/201227917-c53367a7-e867-494f-9746-5fa45fcb6b1d.png)
 
 1.	Create a data model:
     - Define classes: Product, Customer, Supermarket with properties according to schema. Don’t forget about properties appropriate to entities’ Primary keys;
