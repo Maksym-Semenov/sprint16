@@ -17,29 +17,32 @@ Your task is to create a database according to the schema and define all the CRU
 4.	Add connection string to appsettings.json.
 5.	Create the class for seeding your DataBase (SampleData.cs). Define the ServiceProvider in Program.cs.
 6.	Build the application. As the result you might have your DB in SQL Server Object Explorer. 
-https://github.com/FreeJobMe/C-OnlineMarathon-Sprint16/raw/master/images/2.PNG
+![image](https://user-images.githubusercontent.com/35597862/201228373-b3e2d345-4df5-47fd-9517-840269e08c86.png)
+![image](https://user-images.githubusercontent.com/35597862/201228387-48b01d5e-5915-4089-aa66-576e7ff4822e.png)
+![image](https://user-images.githubusercontent.com/35597862/201228405-00b245d6-dfbc-4096-bab2-ace53b8d8e0f.png)
+
 
 Note. In case of any mistakes in DB schema you are able to alter the models, add migrations and update your database.
 7.	Create controllers and views for Products, Supermarkets, Customers DataModels (use scaffolding). Change Index page of application (add navy-bars and links to appropriate Index pages of DataModels) 
 
-![Index](/images/5.PNG)
+![image](https://user-images.githubusercontent.com/35597862/201228438-408014c6-8409-4bbb-a47a-6895c30f3168.png)
 
 8.	Add the ability to sort the list of customers by the last name or address (in descending and ascending order) 
 
-![Order](/images/6.PNG)
+![image](https://user-images.githubusercontent.com/35597862/201228458-cee4e427-0b7e-454b-b9f1-f1ca6d3b37fa.png)
 
 9.	Add the ability to filter the list of customers by last or first name according to substring in input field 
 
-![Filter](/images/7.PNG)
+![image](https://user-images.githubusercontent.com/35597862/201228490-675b739c-2f7b-4ad2-9057-2d72ce47c996.png)
 
 10.	Add pagination to Supermarkets index page 
 
-![Pagination](/images/8.png)
+![image](https://user-images.githubusercontent.com/35597862/201228506-691ab308-5403-4e4a-8c1e-c7d031646f05.png)
 
 
 11.	Create page Orders that reads and displays related data in the following ways 
 
-![Orders](/images/9.png)
+![image](https://user-images.githubusercontent.com/35597862/201228521-d762bf38-b8c1-48b3-b2da-aa1151c4d634.png)
 
    - The list of orders displays related data from the Customers and Supermarkets entities;
    - When the user selects an order, related to it data from OrderDetails entity are displayed;
