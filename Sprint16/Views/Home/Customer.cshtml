@@ -1,6 +1,5 @@
 ﻿@model IEnumerable<Sprint16.Models.Customer>
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@model SortViewModel
 @addTagHelper *, MvcApp
 
 @{
@@ -42,18 +41,12 @@
                 @Html.DisplayNameFor(model => model.Fname)
             </th>
             <th>
-                <sort-header action="Index" up="@Model.SortViewModel.Up"
-                             current="@Model.SortViewModel.Current" property="@Model.SortViewModel.LNameSort">
-                    LName
-                </sort-header>
-                @*@Html.DisplayNameFor(model => model.Lname)*@
+               
+                @Html.DisplayNameFor(model => model.Lname)
             </th>
             <th>
-                <sort-header action="Index" up="@Model.SortViewModel.Up"
-                             current="@Model.SortViewModel.Current" property="@Model.SortViewModel.AdressSort">
-                    Adress
-                </sort-header>
-              @*  @Html.DisplayNameFor(model => model.Adress)*@
+              
+                @Html.DisplayNameFor(model => model.Adress)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Dicsount)
