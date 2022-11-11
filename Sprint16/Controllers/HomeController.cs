@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using sprint_16.Data;
 using Sprint16.Models;
 using System.Diagnostics;
 
@@ -10,22 +11,45 @@ namespace Sprint16.Controllers
         public HomeController(ShoppingContext context)
         {
             this.db = context;
-            
+            SampleData.CreateData(db);
         }
 
         public IActionResult Index()
         {
             return View();
         }
+        public ActionResult Customer(string sortOrder)
+        {
+            ViewBag.LNameSortParm = String.IsNullOrEmpty(sortOrder) ? "Lname_desc" : "Lname_asc";
+            ViewBag.AdressSortParm = sortOrder == "Adress_asc" ? "Adress_desc" : "Adress_asc";
+            var customers = from s in db.Customers
+                            select s;
+            switch (sortOrder)
+            {
+                case "LName_desc":
+                    customers = customers.OrderByDescending(s => s.Lname);
+                    break;
+                case "Adress_asc":
+                    customers = customers.OrderBy(s => s.Adress);
+                    break;
+                case "Adress_desc":
+                    customers = customers.OrderByDescending(s => s.Adress);
+                    break;
+                default:
+                    customers = customers.OrderBy(s => s.Lname);
+                    break;
+            }
+            return View(customers.ToList());
+        }
 
         public IActionResult Privacy()
         {
             return View();
         }
-        public IActionResult Customer()
-        {
-            return View(db.Customers);
-        }
+        //public IActionResult Customer()
+        //{
+        //    return View(db.Customers);
+        //}
         public IActionResult Order()
         {
             return View(db.Orders);

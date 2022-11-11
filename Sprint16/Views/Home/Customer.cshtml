@@ -1,57 +1,30 @@
 ﻿@model IEnumerable<Sprint16.Models.Customer>
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@addTagHelper *, MvcApp
 
 @{
     ViewData["Title"] = "Customer";
 }
 
-<style>
-    td, th {
-        padding: 0 13px 0 0;
-    }
-
-    .glyphicon {
-        border: solid black;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 3px;
-        margin: 0 5px;
-    }
-
-    .glyphicon-chevron-down {
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-    }
-
-    .glyphicon-chevron-up {
-        transform: rotate(-135deg);
-        -webkit-transform: rotate(-135deg);
-    }
-</style>
 <h1>Customer</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
+                @Html.ActionLink("Lname", "Customer", new { sortOrder = ViewBag.NameSortParm })
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Fname)
             </th>
             <th>
-               
-                @Html.DisplayNameFor(model => model.Lname)
-            </th>
-            <th>
-              
-                @Html.DisplayNameFor(model => model.Adress)
+                @Html.ActionLink("Adress", "Customer", new { sortOrder = ViewBag.AdressSortParm })
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Dicsount)
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
