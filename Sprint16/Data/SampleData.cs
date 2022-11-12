@@ -31,10 +31,8 @@ namespace sprint_16.Data
                 Order order4 = new Order { OrderDate = new DateTime(2020, 01, 22), Customer = customer7, Supermarket = superMarket2, CustomerId = customer7.Id, SupermarketId = superMarket2.Id };
                 Order order5 = new Order { OrderDate = new DateTime(2021, 03, 12), Customer = customer1, Supermarket = superMarket3, CustomerId = customer1.Id, SupermarketId = superMarket3.Id };
                 Order order6 = new Order { OrderDate = new DateTime(2019, 12, 05), Customer = customer5, Supermarket = superMarket3, CustomerId = customer5.Id, SupermarketId = superMarket3.Id };
-                Order order7 = new Order { OrderDate = new DateTime(2022, 05, 23), Customer = customer8, Supermarket = superMarket2, CustomerId = customer8.Id, SupermarketId = superMarket2.Id };
-                Order order8 = new Order { OrderDate = new DateTime(2019, 03, 16), Customer = customer6, Supermarket = superMarket4, CustomerId = customer6.Id, SupermarketId = superMarket4.Id };
 
-                db.Orders.AddRange(order1, order2, order3, order4, order5, order6, order7, order8);
+                db.Orders.AddRange(order1, order2, order3, order4, order5, order6);
 
                 Product product1 = new Product { Name = "Milk", Price = 15 };
                 Product product2 = new Product { Name = "Kefir", Price = 25 };
@@ -51,9 +49,9 @@ namespace sprint_16.Data
                 OrderDetail detail3 = new OrderDetail { Quantity = 9, Product = product6, Order = order2, OrderId = order2.Id, ProductId = product6.Id };
                 OrderDetail detail4 = new OrderDetail { Quantity = 10, Product = product8, Order = order4, OrderId = order4.Id, ProductId = product8.Id };
                 OrderDetail detail5 = new OrderDetail { Quantity = 8, Product = product2, Order = order6, OrderId = order6.Id, ProductId = product2.Id };
-                OrderDetail detail6 = new OrderDetail { Quantity = 8.5, Product = product7, Order = order7, OrderId = order7.Id, ProductId = product7.Id };
+                OrderDetail detail6 = new OrderDetail { Quantity = 8.5, Product = product7, Order = order2, OrderId = order2.Id, ProductId = product7.Id };
                 OrderDetail detail7 = new OrderDetail { Quantity = 30.75, Product = product4, Order = order3, OrderId = order3.Id, ProductId = product4.Id };
-                OrderDetail detail8 = new OrderDetail { Quantity = 30.75, Product = product5, Order = order8, OrderId = order8.Id, ProductId = product5.Id };
+                OrderDetail detail8 = new OrderDetail { Quantity = 30.75, Product = product5, Order = order6, OrderId = order6.Id, ProductId = product5.Id };
                 db.OrderDetails.AddRange(detail1, detail2, detail3, detail4, detail5, detail6, detail7, detail8);
 
                 db.SaveChanges();

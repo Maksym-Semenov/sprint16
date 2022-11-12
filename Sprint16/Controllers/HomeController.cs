@@ -30,7 +30,6 @@ namespace Sprint16.Controllers
             {
                 customers = customers.Where(p => p.Fname!.Contains(name) || p.Lname!.Contains(name));
             }
-
            
             switch (sortOrder)
             {
@@ -54,10 +53,7 @@ namespace Sprint16.Controllers
         {
             return View();
         }
-        public IActionResult Order()
-        {
-            return View(db.Orders);
-        }
+       
         public IActionResult OrderDetail(int id)
         {
             IQueryable<OrderDetail> products;
@@ -81,7 +77,7 @@ namespace Sprint16.Controllers
         {
             return View();
         }
-        public IActionResult OrderInfo()
+        public IActionResult Order()
         {
             List<OrderInfo> orders = new List<OrderInfo>();
 
@@ -98,11 +94,12 @@ namespace Sprint16.Controllers
             DataTable dataTable = new DataTable();
 
             sqlDataAdapter.Fill(dataTable);
-
+            int i = 1;
             foreach (DataRow dr in dataTable.Rows)
             {
                 string custm = "";
                 OrderInfo info = new OrderInfo();
+                info.Id = i;
                 info.OrderDate = Convert.ToDateTime(dr["order_date"]);
 
                 custm += dr["fname"].ToString();
@@ -112,11 +109,12 @@ namespace Sprint16.Controllers
 
                 info.SuperMarket = dr["name"].ToString();
                 orders.Add(info);
-
+                i++;
             }
 
             return View(orders);
         }
+        
         public IActionResult Product()
         {
             return View(db.Products);
