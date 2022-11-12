@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         public DateTime OrderDate { get; set; }
-        public string Customer { get; set; }
-        public string SuperMarket { get; set; }
+        public string? Customer { get; set; }
+        public string? SuperMarket { get; set; }
     }
 }
