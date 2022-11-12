@@ -13,20 +13,19 @@ namespace Sprint16.Controllers
             this.db = context;
             SampleData.CreateData(db);
         }
-
         public IActionResult Index()
         {
             return View();
         }
         public ActionResult Customer(string sortOrder)
         {
-            ViewBag.LNameSortParm = String.IsNullOrEmpty(sortOrder) ? "Lname_desc" : "Lname_asc";
+            ViewBag.LnameSortParm = String.IsNullOrEmpty(sortOrder) ? "Lname_desc" : "";
             ViewBag.AdressSortParm = sortOrder == "Adress_asc" ? "Adress_desc" : "Adress_asc";
             var customers = from s in db.Customers
                             select s;
             switch (sortOrder)
             {
-                case "LName_desc":
+                case "Lname_desc":
                     customers = customers.OrderByDescending(s => s.Lname);
                     break;
                 case "Adress_asc":

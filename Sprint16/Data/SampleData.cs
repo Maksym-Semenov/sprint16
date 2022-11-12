@@ -8,14 +8,14 @@ namespace sprint_16.Data
         {
             if (db.Customers.Count() == 0)
             {
-                Customer customer1 = new Customer { Fname = "Artem", Lname = "Tazq", Adress = "adress1", Dicsount = 10 };
-                Customer customer2 = new Customer { Fname = "Kris", Lname = "Ban", Adress = "adress2", Dicsount = 15 };
-                Customer customer3 = new Customer { Fname = "Anna", Lname = "Kilz", Adress = "adress3", Dicsount = 5 };
-                Customer customer4 = new Customer { Fname = "Julia", Lname = "Rik", Adress = "adress4", Dicsount = 15 };
-                Customer customer5 = new Customer { Fname = "Ivan", Lname = "Pop", Adress = "adress5", Dicsount = 5 };
-                Customer customer6 = new Customer { Fname = "Jack", Lname = "Vall", Adress = "adress6", Dicsount = 20 };
-                Customer customer7 = new Customer { Fname = "Dan", Lname = "Snik", Adress = "adress7", Dicsount = 10 };
-                Customer customer8 = new Customer { Fname = "Pip", Lname = "Don", Adress = "adress8", Dicsount = 5 };
+                Customer customer1 = new Customer { Lname = "Artem", Fname = "Tazq", Adress = "adress1", Dicsount = 10 };
+                Customer customer2 = new Customer { Lname = "Kris", Fname = "Ban", Adress = "adress2", Dicsount = 15 };
+                Customer customer3 = new Customer { Lname = "Anna", Fname = "Kilz", Adress = "adress3", Dicsount = 5 };
+                Customer customer4 = new Customer { Lname = "Julia", Fname = "Rik", Adress = "adress4", Dicsount = 15 };
+                Customer customer5 = new Customer { Lname = "Ivan", Fname = "Pop", Adress = "adress5", Dicsount = 5 };
+                Customer customer6 = new Customer { Lname = "Jack", Fname = "Vall", Adress = "adress6", Dicsount = 20 };
+                Customer customer7 = new Customer { Lname = "Dan", Fname = "Snik", Adress = "adress7", Dicsount = 10 };
+                Customer customer8 = new Customer { Lname = "Pip", Fname = "Don", Adress = "adress8", Dicsount = 5 };
                 db.Customers.AddRange(customer1, customer2, customer3, customer4, customer5, customer6, customer7, customer8);
 
                 SuperMarket superMarket1 = new SuperMarket { Name = "Varus", Adress = "Odessa" };
