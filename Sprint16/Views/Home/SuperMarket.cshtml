@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<Sprint16.Models.SuperMarket>
 
 @{
-    ViewData["Title"] = "SuperMarket";
+    ViewData["Title"] = "SuperMarkets";
 }
 
-<h1>SuperMarket</h1>
+<h1>SuperMarkets</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -22,20 +22,49 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Adress)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Adress)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+<ul class="pagination">
+    @{
+        int TotSuperm = ViewBag.TotalSuperm;
+        int CurPage = ViewBag.pageCurrent;
+        int NumPage = ViewBag.Numpage;
+
+        if (CurPage > 1)
+        {
+            int PrevPage = CurPage - 1;
+            <li><a href="?page=@PrevPage"> Prev</a></li>
+        }
+        if (CurPage == 1)
+        {
+            <li> Prev</li>
+        }
+
+        <text>|</text>
+        if (CurPage < NumPage)
+        {
+            int NextPage = CurPage + 1;
+            <li><a href="?page=@NextPage"> Next </a></li>
+        }
+        if (CurPage == NumPage)
+        {
+            <li> Next </li>
+        }
+    }
+</ul>
