@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<Sprint16.Models.Customer>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
     ViewData["Title"] = "Customer";
@@ -7,34 +8,41 @@
 <h1>Customer</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+
+    @Html.ActionLink("Create New", "Create")
 </p>
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("name")
+        <input type="submit" value="Search" />
+    </p>
+}
 <table class="table">
     <thead>
         <tr>
             <th>
+                @Html.ActionLink("Lname", "Customer", new { sortOrder = ViewBag.LnameSortParm })
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Fname)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Lname)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Adress)
+                @Html.ActionLink("Adress", "Customer", new { sortOrder = ViewBag.AdressSortParm })
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Dicsount)
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Fname)
+                @Html.DisplayFor(modelItem => item.Lname)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Lname)
+                @Html.DisplayFor(modelItem => item.Fname)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Adress)
