@@ -17,6 +17,11 @@ namespace Sprint16.Controllers
         }
         public IActionResult Index()
         {
+            //if (User.Identity.IsAuthenticated)
+            //{
+            //    return Content(User.Identity.Name);
+            //}
+            //return Content("Not Authenticated");
             return View();
         }
         public ActionResult Customer(string sortOrder, string name)
